@@ -82,7 +82,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 48px;
-        background: rgba(4, 5, 5, 0.01);
+        background: linear-gradient(to right, rgb(255, 255, 255) 15px, rgba(4, 5, 5, 0.01), rgba(4, 5, 5, 0.01));
         backdrop-filter: blur(16px);
         border-bottom: 1px solid rgba(191, 30, 45, 0.15);
         transition:
@@ -91,8 +91,8 @@
       }
 
       nav.scrolled {
-        height: 60px;
-        background: rgba(4, 5, 5, 0.99);
+        height: 65px;
+        background: linear-gradient(to right, rgb(255, 255, 255) 20px, rgba(4, 5, 5, 0.99), rgba(4, 5, 5, 0.99));
       }
 
       #header-cta {
@@ -452,13 +452,14 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        font-size: 9px;
+        font-size: 12px;
         letter-spacing: 4px;
         text-transform: uppercase;
         color: var(--red);
         margin-bottom: 22px;
         opacity: 0;
         animation: fadeUp 0.8s 0.2s forwards;
+        font-weight:bold;
       }
 
       .hero-badge::before {
@@ -470,11 +471,11 @@
 
       .hero-h1 {
         font-family: var(--font-d);
-        font-size: clamp(52px, 8.5vw, 128px);
+        font-size: clamp(50px, 8.5vw, 126px);
         line-height: 0.92;
         letter-spacing: 1px;
         color: var(--white);
-        margin-bottom: 28px;
+        margin-bottom: 18px;
         opacity: 0;
         animation: fadeUp 0.9s 0.4s forwards;
       }
@@ -707,11 +708,12 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        font-size: 9px;
+        font-size: 12px;
         letter-spacing: 4px;
         text-transform: uppercase;
         color: var(--red);
         margin-bottom: 16px;
+        font-weight:bold;
       }
 
       .sec-label::before {
@@ -1976,6 +1978,7 @@
       }
 
       /* ─── RESPONSIVE ─── */
+
       @media (max-width: 1100px) {
         nav {
           padding: 0 28px;
@@ -2017,14 +2020,20 @@
         }
       }
 
+      @media (max-width: 840px) {
+        nav #header-cta {
+          display: none;
+        }
+      }
+
       @media (max-width: 768px) {
         nav {
           padding: 0 20px;
-          height: 62px;
+          background: linear-gradient(to right, rgb(255, 255, 255) 20%, rgba(4, 5, 5, 0.01), rgba(4, 5, 5, 0.01));
         }
 
         nav.scrolled {
-          height: 56px;
+          background: linear-gradient(to right, rgb(255, 255, 255) 25%, rgba(4, 5, 5, 0.99), rgba(4, 5, 5, 0.99));
         }
 
         .nav-links {
@@ -2157,15 +2166,7 @@
     <!-- NAV -->
     <nav id="nav">
       <a href="#" class="nav-logo">
-        <div class="logo-box">
-          <span class="initial-1">J</span>
-          <span class="initial-2">C</span>
-          <span class="initial-3"></span>
-        </div>
-        <div class="logo-text">
-          <strong>JAZIKA CONCEPTS</strong>
-          <em>Events · Marketing · PR</em>
-        </div>
+        <img src="jc-logo.png" alt="Jazika Concepts Logo" style="display: inline-block; width: 100px" />
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -2295,20 +2296,10 @@
       <div class="wrap">
         <div class="about-g rv">
           <div class="about-visual">
-            <img
-              class="av-img1"
-              src="analytics.jpg?w=800&q=80"
-              alt="Jazika Concepts Team"
-              loading="lazy"
-            />
+            <img class="av-img1" src="analytics.jpg?w=800&q=80" alt="Jazika Concepts Team" loading="lazy" />
             <div class="av-rect-grey"></div>
             <div class="av-rect-red"></div>
-            <img
-              class="av-img2"
-              src="social-media-marketings.jpg?w=600&q=80"
-              alt="Event Production"
-              loading="lazy"
-            />
+            <img class="av-img2" src="social-media-marketings.jpg?w=600&q=80" alt="Event Production" loading="lazy" />
             <div class="av-badge">
               <strong>2014</strong>
               <span>Established</span>
@@ -2318,19 +2309,18 @@
             <div class="sec-label">Our Story</div>
             <h2 class="sec-title">Africa's Creative<br />Marketing Partner</h2>
             <p class="ab-text">
-              <strong>Jazika Concepts</strong> is a Kenyan-based Events &amp; PR firm specialised in Marketing, Public
-              Relations &amp; Communications. Formerly Grand Concepts, we've been connecting brands with their people
-              since 2014.
+              <strong>Jazika Concepts</strong> is majorly an Events, Marketing, and PR firm specializing in the art of
+              connecting brands with their target audience.
             </p>
             <p class="ab-text">
-              Our flagship brand, <strong>Afrika TV Kenya</strong>, boasts over 75,000 followers — giving us a unique
-              ability to steer key social conversations on emerging issues among young Kenyans.
+              As a premier events, marketing, and PR firm, we are dedicated to curating impactful experiences that drive
+              meaningful change for our brand partners across various touch points.
             </p>
             <p class="ab-text">
-              Every client — small or large — gets the same passionate dedication. Every project has one
-              <strong>dedicated account director</strong> from start to finish for seamless delivery.
+              We offer a wide range of solutions — from corporate branding, events planning and management, brand
+              activations, and outdoor advertising, to public relations, digital marketing, and interior design. We
+              strive to ensure we meet every client's expectations, regardless of scale.
             </p>
-            <div class="ab-pill">📺 Afrika TV Kenya · 75K+ Followers</div>
             <div style="margin-top: 8px">
               <a href="#contact" class="btn-primary"><span>Work With Us</span></a>
             </div>
